@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography } from '@mui/material';
 const Section = ({ title, children, isMobileOrTablet }) => (
     <>
-      <Typography variant="h1" fontWeight={450} textAlign={'left'} gutterBottom sx={{ marginBottom: "3vh", color: '#2f3135' }}>
+      <Typography variant="h1" fontWeight={450} textAlign={'center'} gutterBottom sx={{ marginBottom: "3vh", color: '#2f3135' }}>
         {title}
       </Typography>
       <Typography 
@@ -11,7 +11,7 @@ const Section = ({ title, children, isMobileOrTablet }) => (
         sx={{
           fontSize: isMobileOrTablet ? "0.75rem" : "1.4rem", 
           color: '#696969',
-          textAlign: 'left',
+          textAlign: 'center',
           mb: 3
         }}
       >

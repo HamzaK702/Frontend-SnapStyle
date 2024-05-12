@@ -64,7 +64,7 @@ export default function CustomTryOn() {
           effect={'flip'}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={1}
+          slidesPerView={3}
           loop={true}
           coverflowEffect={{
             rotate: 50,
@@ -92,7 +92,7 @@ export default function CustomTryOn() {
             width:   isMobileOrTablet ? mediumMobile ? "80vw" : "70vw" : 345,
             height: isMobileOrTablet ? 250 : 300,
             marginLeft: smallMobile ? "4vh" : mediumMobile ? "1vh" : largeMobile ? "0vh" : 0,
-
+            
             border: 0,
            
           
