@@ -38,33 +38,10 @@ const reviewData = [
     name: "Junaid Ali",
     review: "MashaAllah never met a staff like that, Great. Usually staff of such places are very rude but they are such a cool guys.",
     },
-    {
-      name: "Farukh Shahzad",
-      review: "Good Services round the clock, TCS has great storage facility where the goods are delivered all over the city and country, in fact dispatched for overseas as well, delivery and tracking system is best among the courier services of Pakistan, they deliver very on time and safely, so it is recommended and authentic courier service.",
-      
-    },
-    {
-      name: "Azhar Javed",
-      review: "TCS Express and Logistics is one and only reliable and trusted courier/logistic company.",
-      
-    },
-    {
-      name: "M Jawwad Moeen",
-      review: "Friendly Cooperative Staff. Guides well for documentation work. Customers are generally satisfied with this courier service.",
-      
-    },
-    {
-    name: "Muhammad Hamid",
-    review: "Operates smoothly. Even guides for special process like document attestation for educational or immigration purposes. Quick response to grievances. Like",
-    
-    },
-    {
-    name: "Junaid Ali",
-    review: "MashaAllah never met a staff like that, Great. Usually staff of such places are very rude but they are such a cool guys.",
-    },
+   
 ];
 
-export default function CustomReviews() {
+export default function CustomTryOn() {
   const theme = useTheme();
   const isMobileOrTablet = useMediaQuery(theme.breakpoints.down('md'));
  
@@ -82,12 +59,12 @@ export default function CustomReviews() {
 
   return (
     <>
-    <Box id="customReviews" maxWidth="lg"  >
+    <Box id="customReviews" maxWidth="lg" style={{ margin: "0 auto", textAlign: "center" }}>
     <Swiper
-          effect={'coverflow'}
+          effect={'flip'}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={'auto'}
+          slidesPerView={1}
           loop={true}
           coverflowEffect={{
             rotate: 50,
@@ -116,16 +93,9 @@ export default function CustomReviews() {
             height: isMobileOrTablet ? 250 : 300,
             marginLeft: smallMobile ? "4vh" : mediumMobile ? "1vh" : largeMobile ? "0vh" : 0,
 
-            border: 1,
-            backgroundColor:"white",
-            borderColor: "#808080",
-            borderRadius: '12px',
-            overflow: 'hidden',
-            transition: 'box-shadow 0.3s ease-in-out',
-            '&:hover': {
-              boxShadow: '0 0 5px #ec1c24',
-              border: 'none',
-            },
+            border: 0,
+           
+          
           }}
         >
           <Box sx={{
@@ -135,15 +105,8 @@ export default function CustomReviews() {
             width: '100%',
             padding: 2,
           }}>
-            <Typography gutterBottom variant="h6" component="div">
-              {review.name}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {review.review}
-            </Typography>
-            <Box sx={{ display: 'flex' }}>
-              {renderStars()}
-            </Box>
+            <img src={`assets/${index+1}.png`} alt=""/>
+            
           </Box>
         </ButtonBase>
         </SwiperSlide>

@@ -3,7 +3,7 @@ import { Container, Typography, TextField, Button, InputAdornment, FormControl, 
 import CustomButtons from './CustomButtons';
 import BiggerButton from './BiggerButtons';
 // import Story from '../../components/Story';
-import CustomReviews from './CustomReviews3d';
+import CustomTryOn from './CustomReviews3d';
 // import Reviews from './Reviews';
 import FAQ from './FAQ';
 import GetInTouch from './GetInTouch';
@@ -125,7 +125,7 @@ const Express = () => {
     
       <Container  id="reviewsSection" maxWidth="lg" sx={{ display: "flex",flexDirection: "column" }}>
          
-    
+    <CustomTryOn/>
        
       </Container>
       </Box>
