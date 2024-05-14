@@ -1,59 +1,65 @@
-import "./styles.css";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { Card, CardContent, Typography } from '@mui/material';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-// Define cardVariants directly without using TypeScript interface
-const cardVariants = {
-  offscreen: {
-    y: 300
-  },
-  onscreen: {
-    y: 50,
-    rotate: -10,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8
-    }
-  }
+const spring = {
+  type: 'spring',
+  damping: 20,
+  stiffness: 300
 };
 
-// Function to generate background color based on hue
-const hue = (h) => `hsl(${h}, 100%, 50%)`;
+const variants = {
+  hidden: { y: 100, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { ...spring, duration: 0.9 } } // Adjusted duration to make the animation slower
+};
 
-// Card component as a function
-function Card({ emoji, hueA, hueB }) {
-  const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`;
-
-  return (
-    <motion.div
-      className="framer-card-container" // Add specific class for styling
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
-    >
-      <div className="splash" style={{ background }} />
-      <motion.div className="card" variants={cardVariants}>
-        {emoji}
-      </motion.div>
-    </motion.div>
-  );
-}
-
-// Array of food items with emoji and hues
-const food = [
-  ["Measurement", 340, 10],
-  ["🍊", 20, 40],
-  ["🍋", 60, 90],
-  ["🍐", 80, 120],
-  ["🍏", 100, 140],
-  ["🫐", 205, 245],
-  ["🍆", 260, 290],
-  ["🍇", 290, 320]
+const cards = [
+  { title: 'Card 1', content: 'Content for Card 1' },
+  { title: 'Card 2', content: 'Content for Card 2' },
+  { title: 'Card 3', content: 'Content for Card 3' }
 ];
 
-// App component to render Card components for each food item
-export default function App() {
-  return food.map(([emoji, hueA, hueB]) => (
-    <Card emoji={emoji} hueA={hueA} hueB={hueB} key={emoji} />
-  ));
+export default function AnimatedCards() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  return (
+    <div ref={ref} style={{ height: '100vh', overflow: 'hidden' }}> {/* Hide scrollbar */}
+      <motion.div
+        style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+        initial="hidden"
+        animate={controls}
+      >
+        {cards.map((card, index) => (
+          <motion.div
+            key={index}
+            style={{ width: '70%', margin: '20px 0' }}
+            variants={variants}
+            initial="hidden" // Delay initial animation of each card
+            animate={inView ? 'visible' : 'hidden'} // Start animation only when in view
+          >
+            <Card>
+              <CardContent>
+                <Typography variant="h5" component="div">
+                  {card.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {card.content}
+                </Typography>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  );
 }

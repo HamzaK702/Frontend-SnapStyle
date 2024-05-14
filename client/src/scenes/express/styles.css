@@ -77,9 +77,6 @@ body {
   left: 0;
   right: 0;
   top: 0;
-  clip-path: path(
-    "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
-  );
 }
 
 .framer-card-container .card {
@@ -94,6 +91,126 @@ body {
   box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
     0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
     0 0 16px hsl(0deg 0% 0% / 0.075);
-  transform-origin: 10% 60%;
+}
+
+body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--white);
+  --accent: var(--black);
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--accent);
+  padding-bottom: 100px;
+}
+
+* {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  text-align: center;
+  margin: 100px 0 40px;
+}
+
+h2 {
+  font-weight: 400;
+  margin: 50px 0 10px;
+}
+
+p {
+  margin: 0 0 30px 0;
+  font-size: 18px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0) 1px,
+    var(--background) 1px
+  );
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
+  font-size: 14px;
+  line-height: 14px;
+}
+
+footer::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.2;
+}
+
+footer svg {
+  margin-right: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+code {
+  font-family: input-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+article {
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--pink);
+  transform-origin: 0%;
+  z-index: 15;
 }
 

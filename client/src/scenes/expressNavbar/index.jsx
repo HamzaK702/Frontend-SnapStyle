@@ -19,7 +19,7 @@ const ExpressNavbar = () => {
   };
 
   const navLinks = [
-    { title: "Try Now", to: "/customer", scrollId: "contactSection" },
+    { title: "Try Now", to: "/try" },
   ];
 
   // Function to handle navigation or scrolling

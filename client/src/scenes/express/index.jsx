@@ -18,6 +18,7 @@ import BackgroundText from '../../components/BackgroundText';
 import VideoPlayer from '../../components/VideoPlayer';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import FAQs from '../homepage/FAQs';
+import { motion, useScroll, useSpring } from "framer-motion";
 // import Review from './NewReview';
 const Express = () => {
   const [consignmentNo, setConsignmentNo] = useState('');
@@ -27,6 +28,12 @@ const Express = () => {
   const location = useLocation();
   const [expandedCourier, setExpanded] = useState(false);
   const [expandedLuggagePlus, setLuggageExpanded] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   const handleToggleExpand = () => {
     setExpanded(!expandedCourier);
@@ -84,11 +91,13 @@ const Express = () => {
 
   return (
     <>
-    <ExpressNavbar />
+     
+    
     <BannerCarousel/>
 
     <Box  sx={{  mt: "5vh"}}>
     <BackgroundText/>
+    <motion.div className="progress-bar" style={{ scaleX }} />
     </Box>
      <Box  sx={{ display: 'flex', flexDirection: 'column', minHeight: '50vh' }}>
      
