@@ -17,6 +17,8 @@ import BackgroundText from '../../components/BackgroundText';
 import VideoPlayer from '../../components/VideoPlayer';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import FAQs from '../homepage/FAQs';
+import ThreeBox from '../../components/threebox';
+import ShirtPic from '../../components/ShirtPic';
 // import Review from './NewReview';
 const Express = () => {
   const [consignmentNo, setConsignmentNo] = useState('');
@@ -85,6 +87,7 @@ const Express = () => {
     <>
     <ExpressNavbar />
     <BannerCarousel/>
+    
 
     <Box  sx={{  mt: "5vh"}}>
     <BackgroundText/>
@@ -110,10 +113,11 @@ const Express = () => {
          
           <VideoPlayer/>
       
-     
+          
           
 
         </Container>
+        <ThreeBox />
       </Box>
       <Container maxWidth="lg" sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
       
@@ -128,7 +132,11 @@ const Express = () => {
     
        
       </Container>
+      
       </Box>
+      <div>
+            <ShirtPic />
+        </div>
     </>
   );
 };
