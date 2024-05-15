@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
 import { Box } from '@mui/material';
 
-function BodyScan() {
+function ChooseClothes() {
     const animationContainer = useRef(null);
 
     useEffect(() => {
@@ -11,7 +11,7 @@ function BodyScan() {
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            path: process.env.PUBLIC_URL + '/assets/BodyScan.json' // animation file path
+            path: process.env.PUBLIC_URL + '/assets/ChooseClothes.json' // animation file path
         });
 
         return () => animation.destroy(); // cleanup for unmounting
@@ -19,9 +19,9 @@ function BodyScan() {
 
     return (
         <Box display="flex" alignItems="center" justifyContent="center" minHeight="100vh">
-            <div ref={animationContainer} style={{ width: 500, height: 500 }}></div>
+            <div ref={animationContainer} style={{ width: 300, height: 300 }}></div>
         </Box>
     );
 }
 
-export default BodyScan;
+export default ChooseClothes;
