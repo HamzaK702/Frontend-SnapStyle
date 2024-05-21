@@ -19,6 +19,8 @@ import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import FAQs from '../homepage/FAQs';
 import ThreeBox from '../../components/threebox';
 import ShirtPic from '../../components/ShirtPic';
+import Benefits from '../../components/Benefits';
+import WhySnapStyle from '../../components/WhySnapStyle';
 // import Review from './NewReview';
 const Express = () => {
   const [consignmentNo, setConsignmentNo] = useState('');
@@ -117,6 +119,8 @@ const Express = () => {
           
 
         </Container>
+        <WhySnapStyle />
+        <Benefits />
         <ThreeBox />
       </Box>
       <Container maxWidth="lg" sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>

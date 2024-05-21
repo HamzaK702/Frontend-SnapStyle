@@ -1,115 +1,5 @@
 
 
-//without animation
-
-// import React, { useRef, useState } from 'react';
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Box, Typography, TextField, InputAdornment, Button, FormControl, useMediaQuery, useTheme } from '@mui/material';
-// import { useNavigate, useLocation } from 'react-router-dom';
-// // Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
-
- 
-
-// // import required modules
-// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
-// export default function BannerCarousel() {
-//     const [consignmentNo, setConsignmentNo] = useState('');
-//     const navigate = useNavigate();
-//     const theme = useTheme();
-//     const isMobileOrTablet = useMediaQuery(theme.breakpoints.down('md'));
-//     const isTablet = useMediaQuery(theme.breakpoints.down('768px'));
-   
-//     const handleTrackClick = () => {
-//      if(consignmentNo){
-//       navigate(`/tracking/${consignmentNo}`);
-//      }
-//     };
-  
-
-
-//     return (
-//         <>  
-       
-//       <Box sx={{ marginTop:"10vh", minWidth: '100vw', display: 'flex', alignContent: 'center', justifyContent: 'center',  }}>
-//         <Swiper
-//           spaceBetween={30}
-//           centeredSlides={true}
-//           autoplay={{
-//             delay: 2500,
-//             disableOnInteraction: false,
-//           }}
-//           pagination={{
-//             clickable: false,
-           
-//           }}
-//           navigation={false}
-//           modules={[Autoplay, Pagination, Navigation]}
-//           className="mySwiper"
-//           style={{ 
-//             "--swiper-pagination-color": "#FF033E",
-//             "--swiper-pagination-bullet-inactive-color": "#999999",
-//             position: "relative",
-//             height:  "100%"
-//           }}
-//         >   
-//              <SwiperSlide>
-//                 <Box sx={{
-//                     minWidth: "70vw",
-//                     display: "flex",
-//                     justifyContent: "center",
-//                     alignItems: "center",
-//                     position: "relative",
-//                     height: "70vh",
-//                     backgroundColor: "#FFCCCC" // Soft red
-//                 }}>
-//                     {/* Content */}
-//                 </Box>
-//             </SwiperSlide>
-
-//             <SwiperSlide>
-//                 <Box sx={{
-//                     minWidth: "70vw",
-//                     display: "flex",
-//                     justifyContent: "center",
-//                     alignItems: "center",
-//                     position: "relative",
-//                     height: "70vh",
-//                     backgroundColor: "#ffa756" // Soft green
-//                 }}>
-//                     {/* Content */}
-//                 </Box>
-//             </SwiperSlide>
-
-//             <SwiperSlide>
-//                 <Box sx={{
-//                     minWidth: "70vw",
-//                     display: "flex",
-//                     justifyContent: "center",
-//                     alignItems: "center",
-//                     position: "relative",
-//                     height: "70vh",
-//                     backgroundColor: "#CCCCFF" // Soft blue
-//                 }}>
-//                     {/* Content */}
-//                 </Box>
-//             </SwiperSlide>
-           
-        
-         
-//         </Swiper>
-//       </Box>
-//       </>
-//     );
-//   }
-
-
-// with animation
-
 // import React, { useRef, useState, useEffect } from 'react';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Box, Typography, Button, useMediaQuery, useTheme } from '@mui/material';
@@ -118,143 +8,9 @@
 // import 'swiper/css/pagination';
 // import 'swiper/css/navigation';
 // import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-// import lottie from 'lottie-web';
-
-// function ShirtPic() {
-//     const animationContainer = useRef(null);
-
-//     useEffect(() => {
-//         const animation = lottie.loadAnimation({
-//             container: animationContainer.current,
-//             renderer: 'svg',
-//             loop: true,
-//             autoplay: true,
-//             path: process.env.PUBLIC_URL + '/assets/QuestionMarkShirt.json'
-//         });
-
-//         return () => animation.destroy();
-//     }, []);
-
-//     return (
-//         <Box display="flex" alignItems="center" justifyContent="center">
-//             <div ref={animationContainer} style={{ width: 300, height: 300 }}></div>
-//         </Box>
-//     );
-// }
-
-// export default function BannerCarousel() {
-//     const [consignmentNo, setConsignmentNo] = useState('');
-//     const navigate = useNavigate();
-//     const theme = useTheme();
-//     const isMobileOrTablet = useMediaQuery(theme.breakpoints.down('md'));
-
-//     const handleTrackClick = () => {
-//         if (consignmentNo) {
-//             navigate(`/tracking/${consignmentNo}`);
-//         }
-//     };
-
-//     const handleGenerateClick = () => {
-//         // Navigate to the generation page or perform the desired action
-//         navigate('/generate');
-//     };
-
-//     return (
-//         <>
-//             <Box sx={{ marginTop: "10vh", minWidth: '100vw', display: 'flex', alignContent: 'center', justifyContent: 'center' }}>
-//                 <Swiper
-//                     spaceBetween={30}
-//                     centeredSlides={true}
-//                     autoplay={{
-//                         delay: 2500,
-//                         disableOnInteraction: false,
-//                     }}
-//                     pagination={{
-//                         clickable: false,
-//                     }}
-//                     navigation={false}
-//                     modules={[Autoplay, Pagination, Navigation]}
-//                     className="mySwiper"
-//                     style={{
-//                         "--swiper-pagination-color": "#FF033E",
-//                         "--swiper-pagination-bullet-inactive-color": "#999999",
-//                         position: "relative",
-//                         height: "100%"
-//                     }}
-//                 >
-//                     <SwiperSlide>
-//                         <Box sx={{
-//                             minWidth: "70vw",
-//                             display: "flex",
-//                             justifyContent: "center",
-//                             alignItems: "center",
-//                             position: "relative",
-//                             height: "70vh",
-//                             backgroundColor: "#FFCCCC" // Soft red
-//                         }}>
-//                             <Box display="flex" flexDirection="column" alignItems="center">
-//                                 <ShirtPic />
-//                                 <Typography variant="h4" align="center" sx={{ marginTop: 2 }}>
-//                                     Generate your own clothes now
-//                                 </Typography>
-//                                 <Button
-//                                     variant="contained"
-//                                     color="secondary"
-//                                     onClick={handleGenerateClick}
-//                                     sx={{ marginTop: 2 }}
-//                                 >
-//                                     Generate Now!
-//                                 </Button>
-//                             </Box>
-//                         </Box>
-//                     </SwiperSlide>
-//                     <SwiperSlide>
-//                         <Box sx={{
-//                             minWidth: "70vw",
-//                             display: "flex",
-//                             justifyContent: "center",
-//                             alignItems: "center",
-//                             position: "relative",
-//                             height: "70vh",
-//                             backgroundColor: "#ffa756" // Soft green
-//                         }}>
-//                             {/* Content */}
-//                         </Box>
-//                     </SwiperSlide>
-//                     <SwiperSlide>
-//                         <Box sx={{
-//                             minWidth: "70vw",
-//                             display: "flex",
-//                             justifyContent: "center",
-//                             alignItems: "center",
-//                             position: "relative",
-//                             height: "70vh",
-//                             backgroundColor: "#CCCCFF" // Soft blue
-//                         }}>
-//                             {/* Content */}
-//                         </Box>
-//                     </SwiperSlide>
-//                 </Swiper>
-//             </Box>
-//         </>
-//     );
-// }
-
-  
-
-//2 animations
-
-// import React, { useRef, useState, useEffect } from 'react';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Box, Typography, Button, useMediaQuery, useTheme } from '@mui/material';
-// import { useNavigate } from 'react-router-dom';
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
-// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-// import lottie from 'lottie-web';
 // import ShirtPic from './ShirtPic';
 // import BodyScan from './BodyScan';
+// import ChooseClothes from './ChooseClothes';
 
 // export default function BannerCarousel() {
 //     const [consignmentNo, setConsignmentNo] = useState('');
@@ -274,6 +30,10 @@
 
 //     const handleMeasureClick = () => {
 //         navigate('/measure');
+//     };
+
+//     const handleTryOnClick = () => {
+//         navigate('/tryon');
 //     };
 
 //     return (
@@ -357,7 +117,7 @@
 //                             </Box>
 //                         </Box>
 //                     </SwiperSlide>
-//                     <SwiperSlide>
+//                     {/* <SwiperSlide>
 //                         <Box sx={{
 //                             minWidth: "70vw",
 //                             display: "flex",
@@ -367,9 +127,56 @@
 //                             height: "70vh",
 //                             backgroundColor: "#CCCCFF" // Soft blue
 //                         }}>
-//                             {/* Content */}
+//                             <Box display="flex" alignItems="center" justifyContent="center">
+//                                 <ChooseClothes />
+//                                 <Box sx={{ marginLeft: 5, marginRight: 5, textAlign: "center" }}>
+//                                     <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
+//                                         TRY ON YOUR CLOTHES NOW!
+//                                     </Typography>
+//                                 </Box>
+//                                 <Button
+//                                     variant="contained"
+//                                     color="secondary"
+//                                     onClick={handleTryOnClick}
+//                                     sx={{ marginLeft: 2 }}
+//                                     size="large"
+//                                 >
+//                                     Try On
+//                                 </Button>
+//                             </Box>
 //                         </Box>
-//                     </SwiperSlide>
+//                     </SwiperSlide> */}
+//                     <SwiperSlide>
+//     <Box sx={{
+//         display: "flex",
+//         justifyContent: "center",
+//         alignItems: "center",
+//         position : "relative",
+//         minHeight: "70vh",
+//         backgroundColor: "#CCCCFF" // Soft blue
+//     }}>
+//         <Box sx={{ width: "50%" }}>
+//             <ChooseClothes /> {/* Assuming this is your animation */}
+//         </Box>
+//         <Box sx={{ marginLeft: 5, marginRight: 5, textAlign: "right" }}>
+//             <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', fontSize: '2rem', marginBottom: 2 }}>
+//                 TRY ON YOUR CLOTHES NOW!
+//             </Typography>
+//             <Button
+//                 variant="contained"
+//                 color="secondary"
+//                 onClick={handleTryOnClick}
+//                 sx={{ marginLeft: 2 }}
+//                 position ="center"
+//                 align = "center"
+//                 size="large"
+//             >
+//                 Try On
+//             </Button>
+//         </Box>
+//     </Box>
+// </SwiperSlide>
+
 //                 </Swiper>
 //             </Box>
 //         </>
@@ -446,18 +253,21 @@ export default function BannerCarousel() {
                             height: "70vh",
                             backgroundColor: "#FFCCCC" // Soft red
                         }}>
-                            <Box display="flex" alignItems="center" justifyContent="center">
+                            <Box sx={{ width: "50%" }}>
                                 <ShirtPic />
-                                <Box sx={{ marginLeft: 5, marginRight: 5, textAlign: "center" }}>
-                                    <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
-                                        GENERATE YOUR OWN CLOTHES NOW!
-                                    </Typography>
-                                </Box>
+                            </Box>
+                            <Box sx={{ marginLeft: 5, textAlign: "center", width: "50%" }}>
+                                <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
+                                    GENERATE YOUR OWN CLOTHES NOW!
+                                </Typography>
+                                <Typography variant="body1" align="center" sx={{ marginTop: 2 }}>
+                                    Create your unique clothing styles with our innovative tools. Design and see your creation come to life.
+                                </Typography>
                                 <Button
                                     variant="contained"
                                     color="secondary"
                                     onClick={handleGenerateClick}
-                                    sx={{ marginLeft: 2 }}
+                                    sx={{ marginTop: 2 }}
                                     size="large"
                                 >
                                     Generate Now!
@@ -475,18 +285,21 @@ export default function BannerCarousel() {
                             height: "70vh",
                             backgroundColor: "#ffa756" // Soft green
                         }}>
-                            <Box display="flex" alignItems="center" justifyContent="center">
+                            <Box sx={{ width: "50%" }}>
                                 <BodyScan />
-                                <Box sx={{ marginLeft: 5, marginRight: 5, textAlign: "center" }}>
-                                    <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
-                                        GET YOURSELF MEASURED NOW!
-                                    </Typography>
-                                </Box>
+                            </Box>
+                            <Box sx={{ marginLeft: 5, textAlign: "center", width: "50%" }}>
+                                <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
+                                    GET YOURSELF MEASURED NOW!
+                                </Typography>
+                                <Typography variant="body1" align="center" sx={{ marginTop: 2 }}>
+                                    Ensure perfect fitting by getting accurate measurements. Quick and easy process.
+                                </Typography>
                                 <Button
                                     variant="contained"
                                     color="secondary"
                                     onClick={handleMeasureClick}
-                                    sx={{ marginLeft: 2 }}
+                                    sx={{ marginTop: 2 }}
                                     size="large"
                                 >
                                     Get Measured!
@@ -504,18 +317,21 @@ export default function BannerCarousel() {
                             height: "70vh",
                             backgroundColor: "#CCCCFF" // Soft blue
                         }}>
-                            <Box display="flex" alignItems="center" justifyContent="center">
+                            <Box sx={{ width: "50%" }}>
                                 <ChooseClothes />
-                                <Box sx={{ marginLeft: 5, marginRight: 5, textAlign: "center" }}>
-                                    <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
-                                        TRY ON YOUR CLOTHES NOW!
-                                    </Typography>
-                                </Box>
+                            </Box>
+                            <Box sx={{ marginLeft: 5, textAlign: "center", width: "50%" }}>
+                                <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
+                                    TRY ON YOUR CLOTHES NOW!
+                                </Typography>
+                                <Typography variant="body1" align="center" sx={{ marginTop: 2 }}>
+                                    Virtually try on your designs to see how they look before making a purchase.
+                                </Typography>
                                 <Button
                                     variant="contained"
                                     color="secondary"
                                     onClick={handleTryOnClick}
-                                    sx={{ marginLeft: 2 }}
+                                    sx={{ marginTop: 2 }}
                                     size="large"
                                 >
                                     Try On
