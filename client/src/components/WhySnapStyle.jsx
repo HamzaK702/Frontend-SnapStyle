@@ -8,19 +8,19 @@ import { Pagination, Autoplay } from 'swiper/modules';
 
 const slides = [
   {
-    imgSrc: 'path-to-image1.jpg',
-    title: 'Free Support',
-    description: 'Be it a bug fix, or adding a new shade or style, our support team is always available at your request.'
+    imgSrc: `${process.env.PUBLIC_URL}/assets/darzi.jpeg`,
+    title: 'Measure Yourself To The T',
+    description: 'Dont know what size you are? No worries! Use our state of the art AI to get accurate measurements of your body from the comfort of your home now!'
   },
   {
-    imgSrc: 'path-to-image2.jpg',
-    title: 'Innovative Designs',
-    description: 'Experience cutting-edge designs that set you apart in the fashion world.'
+    imgSrc: `${process.env.PUBLIC_URL}/assets/suit2.jpeg`,
+    title: 'Choose Your Own Style',
+    description: 'No need to choose from the basic stuff, get creative and use your imagination to generate your own fantasy wardrobe with our Generative AI!'
   },
   {
-    imgSrc: 'path-to-image3.jpg',
-    title: 'Custom Fitting',
-    description: 'Get clothes that fit you perfectly with our advanced measurement tools.'
+    imgSrc: `${process.env.PUBLIC_URL}/assets/suit6.jpeg`,
+    title: 'See How You Look',
+    description: 'Get your dream clothes, then try them virtually on yourself and see how you would look before doing anything crazy!'
   }
 ];
 
@@ -56,11 +56,11 @@ export default function WhySnapStyle() {
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </Box>
-              <Box sx={{ marginLeft: '20px', textAlign: 'left' }}>
+              <Box sx={{ marginLeft: '20px', textAlign: 'left', maxWidth: '500px' }}>
                 <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
                   {slide.title}
                 </Typography>
-                <Typography variant="body1" sx={{ marginTop: '10px' }}>
+                <Typography variant="body1" sx={{ marginTop: '10px', maxHeight: '100px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                   {slide.description}
                 </Typography>
               </Box>
