@@ -105,7 +105,7 @@ const Express = () => {
     <ThreeBox />
     <motion.div className="progress-bar" style={{ scaleX }} />
     </Box>
-     <Box  sx={{ display: 'flex', flexDirection: 'column', minHeight: '50vh' }}>
+     {/* <Box  sx={{ display: 'flex', flexDirection: 'column', minHeight: '50vh' }}>
      
       <Box
         sx={{
@@ -140,7 +140,7 @@ const Express = () => {
       </Container>
 
        
-      </Box>
+      </Box> */}
        
       
 
@@ -148,7 +148,7 @@ const Express = () => {
 
     
       
-      </Box>
+      {/* </Box> */}
     </>
   );
 };
