@@ -72,7 +72,7 @@ export default function ThreeBox() {
                             variant="contained"
                             sx={{ marginTop: 2, backgroundColor: '#FF0066', color: '#FFFFFF' }}
                             size="large"
-                            onClick={() => window.location.href = "http://localhost:3001/generate"}
+                            onClick={() => window.location.href = "http://frontend-snap-style.vercel.app/generate"}
                         >
                             Generate Now!
                         </Button>
@@ -106,7 +106,7 @@ export default function ThreeBox() {
                             variant="contained"
                             sx={{ marginTop: 2, backgroundColor: '#FF4500', color: '#FFFFFF' }}
                             size="large"
-                            onClick={() => window.location.href = "http://localhost:3001/measure"}
+                            onClick={() => window.location.href = "http://frontend-snap-style.vercel.app/measure"}
                         >
                             Get Measured!
                         </Button>
@@ -134,7 +134,7 @@ export default function ThreeBox() {
                             variant="contained"
                             sx={{ marginTop: 2, backgroundColor: '#00FF00', color: '#FFFFFF' }}
                             size="large"
-                            onClick={() => window.location.href = "http://localhost:3001/try"}
+                            onClick={() => window.location.href = "http://frontend-snap-style.vercel.app/try"}
                         >
                             Try On
                         </Button>
