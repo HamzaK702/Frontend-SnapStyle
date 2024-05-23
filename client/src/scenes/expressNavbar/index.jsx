@@ -43,7 +43,7 @@ const ExpressNavbar = () => {
               position: "fixed",  // Changed from "static" to "fixed"
               top: 0,  // Ensures it sticks to the top
               width: '100%',  // Ensures it spans the full width
-              backgroundColor: "rgba(255, 255, 255, 0.7)",  // Transparency
+              backgroundColor: "#000",  // Transparency
               backdropFilter: "blur(10px)",  // Blur effect
               elevation: 0,
               
@@ -86,15 +86,15 @@ const ExpressNavbar = () => {
                 <Button color="inherit" 
                 sx={{
                   backgroundColor: 'transparent', // White background
-                  color: '#e91e63', // Bright pink text
+                  color: 'white', // Bright pink text
                   padding: '6px 16px',
                   fontSize: '0.975rem',
-                  border: '3px solid #e91e63',
-                  borderRadius: '20px',
+                  border: '1px solid white',
+                  borderRadius: '10px',
                   textTransform: 'none',
                   '&:hover': {
-                    backgroundColor: "#e91e63",
-                    color:"white"
+                    backgroundColor: "white",
+                    color:"black"
                   },
                 }}>
                   {link.title}

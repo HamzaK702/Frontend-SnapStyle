@@ -31,7 +31,7 @@ export default function BannerCarousel() {
     return (
         <>  
        
-      <Box sx={{ marginTop:"10vh", minWidth: '100vw', display: 'flex', alignContent: 'center', justifyContent: 'center',  }}>
+      <Box sx={{width:"100%", backgroundColor:"#0000", paddingTop:"5vh", minWidth: '100vw', display: 'flex', alignContent: 'center', justifyContent: 'center'  }}>
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -54,46 +54,36 @@ export default function BannerCarousel() {
           }}
         >   
              <SwiperSlide>
-                <Box sx={{
-                    minWidth: "70vw",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    position: "relative",
-                    height: "70vh",
-                    backgroundColor: "#FFCCCC" // Soft red
-                }}>
-                    {/* Content */}
-                </Box>
+             <Box
+      sx={{
+        minWidth: '100vw',
+        display: 'flex',
+        flexDirection: 'column', // Stacks the boxes vertically
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'relative',
+        height: '100vh',
+        backgroundImage: 'url(/assets/background.png)',
+        backgroundSize: 'cover', // Ensures the image covers the entire box
+        backgroundPosition: 'center', // Centers the image
+      }}
+    >
+       
+        <img
+          src="/assets/realText.png"
+          alt="AI Changing Room"
+          style={{
+            height:600
+              // Ensures the image fits within the box
+          }}
+        />
+      
+    </Box>
             </SwiperSlide>
 
-            <SwiperSlide>
-                <Box sx={{
-                    minWidth: "70vw",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    position: "relative",
-                    height: "70vh",
-                    backgroundColor: "#ffa756" // Soft green
-                }}>
-                    {/* Content */}
-                </Box>
-            </SwiperSlide>
+            
 
-            <SwiperSlide>
-                <Box sx={{
-                    minWidth: "70vw",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    position: "relative",
-                    height: "70vh",
-                    backgroundColor: "#CCCCFF" // Soft blue
-                }}>
-                    {/* Content */}
-                </Box>
-            </SwiperSlide>
+            
            
         
          

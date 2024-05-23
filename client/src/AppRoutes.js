@@ -3,12 +3,18 @@ import { useRoutes, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Express from './scenes/express';
 import TryOnPage from './scenes/try-onpage';
+import GenerateAI from './scenes/generatePage';
 import WipeTransition from './WipeTransition'; // Import WipeTransition component
+import BodyMeasurement from './scenes/bodyMeasurement';
+import TryOnDesignPage from './scenes/designpage';
 
 function AppRoutes() {
   const element = useRoutes([
     { path: '/', element: <Express /> },
     { path: '/try', element: <TryOnPage /> },
+    { path: '/generate', element: <GenerateAI /> },
+    { path: '/measure', element: <BodyMeasurement/> },
+    { path: '/design', element: <TryOnDesignPage/> },
   ]);
 
   const location = useLocation();
@@ -16,7 +22,7 @@ function AppRoutes() {
 
   return (
     <AnimatePresence mode='wait'>
-    <WipeTransition key="wipe-transition" color="purple" />
+    {/* <WipeTransition key="wipe-transition" color="purple" /> */}
       <motion.div
         key={location.pathname}
         initial="initial"
