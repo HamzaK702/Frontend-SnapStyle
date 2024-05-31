@@ -6,17 +6,17 @@ import { themeSettings } from './theme'; // import themeSettings and colorTokens
 import Footer from './scenes/footer';
 import AppRoutes from './AppRoutes'; // Adjust the import path to your AppRoutes component
 import ExpressNavbar from './scenes/expressNavbar';
-const theme = createTheme(themeSettings('light'));
+const theme = createTheme(themeSettings('dark'));
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <ExpressNavbar/>
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '90vh' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor:"black" }}>
           <AppRoutes />
         </Box>
-        <Footer />
+         
       </Router>
     </ThemeProvider>
   );

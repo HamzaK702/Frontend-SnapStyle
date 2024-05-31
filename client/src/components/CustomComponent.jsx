@@ -41,10 +41,10 @@ const CustomComponent = () => {
       </Button>
       <Box display="flex" justifyContent="space-between" mt={3}>
         <Typography style={typographyStyle} textAlign="left" width="45%">
-          Petals AI Wear is a new way of creating clothing. With AI Wear, you can create never-before-seen custom clothing — exploring uncharted territories in clothing pattern design — with the help of AI.
+        SnapStyle AI revolutionizes clothing creation. It takes your measurements and generates custom designs based on your prompts. Explore uncharted territories in clothing pattern design with the help of AI.
         </Typography>
         <Typography style={typographyStyle} textAlign="left" width="45%">
-          Want to take it a step further? Snap a photo of your pet or other reference and work with the AI to turn it into a unique design. With AI Wear, you can create a visual statement that's unique to you.
+        Want to take it a step further? Snap a photo of yourself and work with the AI to try-out a unique design. With SnapStyle AI, you can create a visual statement that's uniquely yours and even try on your creations virtually.  
         </Typography>
       </Box>
     </Box>

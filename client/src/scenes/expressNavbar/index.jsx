@@ -19,7 +19,11 @@ const ExpressNavbar = () => {
   };
 
   const navLinks = [
-    { title: "Try Now", to: "/try" },
+    { title: "Home", to: "/" },
+    { title: "Shapy", to: "/measure" },
+    { title: "Generate Clothes", to: "/generate" },
+    { title: "Virtual Try-on", to: "/try" },
+    { title: "Visualize", to: "/design" },
   ];
 
   // Function to handle navigation or scrolling
@@ -80,27 +84,31 @@ const ExpressNavbar = () => {
               </Drawer>
             </>
           ) : (
-            
-            navLinks.map((link, index) => (
+           <> 
+            {navLinks.map((link, index) => (
               <a key={index} href={link.to} onClick={(e) => handleNavigationOrScroll(e, link)} style={{ textDecoration: 'none', color: 'inherit' }}>
-                <Button color="inherit" 
+                 <Button color="inherit" 
                 sx={{
                   backgroundColor: 'transparent', // White background
                   color: 'white', // Bright pink text
                   padding: '6px 16px',
                   fontSize: '0.975rem',
-                  border: '1px solid white',
-                  borderRadius: '10px',
+                  
+                  
                   textTransform: 'none',
+                  mx:"0.5rem",
                   '&:hover': {
                     backgroundColor: "white",
                     color:"black"
                   },
                 }}>
-                  {link.title}
+                   {link.title}
                 </Button>
               </a>
-            ))
+            ))}
+          
+           
+           </> 
           )}
         </Toolbar>
       </AppBar>

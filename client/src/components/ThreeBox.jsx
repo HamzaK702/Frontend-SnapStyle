@@ -41,7 +41,7 @@ export default function ThreeBox() {
     }, []);
 
     return (
-        <Box ref={threeBoxRef} sx={{ display: 'flex', height: '300vh' }}>
+        <Box ref={threeBoxRef} sx={{ display: 'flex', maxHeight: '300vh', backgroundColor:"black" }}>
             {isNavbarVisible && (
                 <SideNavbar
                     scrollToFirstBanner={scrollToFirstBanner}

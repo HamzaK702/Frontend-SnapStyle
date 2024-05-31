@@ -36,7 +36,7 @@ const Footer = () => {
             left: 0,
             right: 0,
             bottom: 0,  
-            backgroundColor: '#fff',  
+            backgroundColor: '#000',  
             zIndex: 1, 
             width: '100vw',
             mb:"6.5vh"

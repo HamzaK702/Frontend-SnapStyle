@@ -105,50 +105,7 @@ const Express = () => {
     <ThreeBox />
     <motion.div className="progress-bar" style={{ scaleX }} />
     </Box>
-     {/* <Box  sx={{ display: 'flex', flexDirection: 'column', minHeight: '50vh' }}>
-     
-      <Box
-        sx={{
-          
-        }}
-      >
-       
-        <Container maxWidth="lg"
-          sx={{
-            marginTop: isMobileOrTablet ? "2vh" : "20vh",
-            mb: "10vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
-        <VideoPlayer/>
-
-        
-
-        </Container>
-
-        <WhySnapStyle />
-        <Benefits />
-        <Container  id="reviewsSection" maxWidth="lg" sx={{ display: "flex",flexDirection: "column" }}>
-      <Section title={"Transform Your Style with Virtual Try-On: Experience Clothing like Never Before"} children={"Step into the future of fashion exploration with our cutting-edge Virtual Try-On module. Powered by AI technology, our platform revolutionizes the way you shop for clothes online. Seamlessly visualize how each garment fits and flatters your unique physique without ever leaving the comfort of your home. With just a few clicks, immerse yourself in a personalized fitting room experience, allowing you to experiment with styles, colors, and sizes effortlessly. Say goodbye to uncertainty and hello to confidence as you discover the perfect ensemble for every occasion. Explore, experiment, and elevate your wardrobe with our Virtual Try-On feature today!"}/>
-        
-    <CustomTryOn/>
     
-    <Framer/>
-      </Container>
-
-       
-      </Box> */}
-       
-      
-
-
-
-    
-      
-      {/* </Box> */}
     </>
   );
 };
