@@ -21,7 +21,7 @@ const ExpressNavbar = () => {
   const navLinks = [
     { title: "Home", to: "/" },
     { title: "Shapy", to: "/measure" },
-    { title: "Generate Clothes", to: "/generate" },
+    { title: "Generate Design", to: "/generate" },
     { title: "Virtual Try-on", to: "/try" },
     { title: "Visualize", to: "/design" },
   ];
